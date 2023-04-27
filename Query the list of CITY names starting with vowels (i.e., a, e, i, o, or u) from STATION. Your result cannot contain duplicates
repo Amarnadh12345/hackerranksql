@@ -1,0 +1,4 @@
+select distinct city from station where lower(substr(city,1,1)) in ('a','e','i','o','u');
+
+-- by using regular expression
+select distinct city from station where REGEXP_LIKE(city,'^[aeiou].+','i');
